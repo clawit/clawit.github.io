@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include common/head.html %}
+<body>
+<div id="container" class="help page background">
+{% include common/header.html %}
+    <div class="panel main" aria-label="Content">
+        <div class="panel left">
+            <div class="navigation wizard scrollspy" role="navigation">
+                <ul class="nav">
+                    <li><h2>Last releases ({{page.product}})</h2></li>
+                    {% assign items = site.releases | sort: 'date' | reverse %}
+                    {% for item in items limit:12  %}
+                    {% if item.product == page.product %}
+                    <li class="{%if item.version == page.version %}selected{% endif %}">
+                        <a href="{{ item.permalink | absolute_url }}" >{{ item.version }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    <li>
+                        <a href="{{ '/releases' | absolute_url }}" >all releases</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="margin:1em;">
+                <a href="{{ 'releases/' | absolute_url  }}{{ page.product }}.rss" class="primary button">
+                    <i class="fa fa-rss fa-fw"></i>RSS feed</a>
+            </div>
+        </div>
+        <div class="panel middle">
+            <div class="grid grid-responsive-12">
+                <article>
+                    <div class="row">
+                        <div class="col7">
+                            {% include breadcrumbs/default.html %}
+                            <h1>{{ page.version }} ~ {{ page.title }} ({{ page.product }})</h1>
+                            <p>Release date: {% include date/format-page-date.html %}</p>
+                            {{ content }}
+                        </div>
+                        <div class="col5 last">
+                            <div class="tldr" style="margin-top:3em;">
+                                <p>"{{ page.quote }}"</p>
+                                <a href="{{ page.song }}" target="_blank" rel="noopener nofollow" class="button primary">
+                                    <i class="fa fa-music"></i>
+                                    <span class="visuallyhidden">Listen to the release song!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+{% include common/footer.html %}
+</div>
+{% include common/analytics.html %}
+</body>
+</html>

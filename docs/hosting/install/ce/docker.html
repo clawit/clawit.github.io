@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Passbolt Help | Docker passbolt installation</title>
+    <!--
+             ____                  __          ____
+            / __ \____  _____ ____/ /_  ____  / / /_
+           / /_/ / __ `/ ___/ ___/ __ \/ __ \/ / __/
+          / ____/ /_/ (__  |__  ) /_/ / /_/ / / /_
+         /_/    \__,_/____/____/_.___/\____/_/\__/
+
+         Open source password manager for teams
+         © 2018 Passbolt SARL
+
+     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta property="og:image" content="https://help.passbolt.com/assets/img/background/og_preview.jpg" />
+    <meta property="og:title" content="Docker passbolt installation" />
+    <meta property="og:description" content="" />
+
+    <link rel="stylesheet" href="https://help.passbolt.com/assets/css/help.min.css">
+    <link rel="stylesheet" href="https://help.passbolt.com/assets/css/highlight.css">
+    <link rel="canonical" href="https://help.passbolt.com/hosting/install/ce/docker">
+    <link rel="shortcut icon" type="image/x-icon" href="https://help.passbolt.com/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Passbolt | Help" href="https://help.passbolt.com/feed.xml">
+
+</head>
+
+<body>
+<div id="container" class="help page background">
+    <header>
+        <div class="header first ">
+            <nav class="greedy">
+                <div class="top navigation primary">
+                    <ul class="links clearfix">
+                        <li class="home with-text"><a href="http://www.passbolt.com/"><span>home</span></a></li>
+                        <li class="left"><a href="https://www.passbolt.com/services"><span>pricing</span></a></li>
+                        <li class="left"><a href="https://demo.passbolt.com" target="_blank" rel="noopener"><span>demo</span></a></li>
+                        <li class="left"><a href="https://www.passbolt.com/blog"><span>blog</span></a></li>
+                        <li class="left selected"><a href="//help.passbolt.com/"><span>help</span></a></li>
+                    </ul>
+                    <button class="hidden" count="0">more</button>
+                    <ul class="hidden-links hidden"></ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="header second">
+        <div class="col1">
+            <div class="logo no-img">
+                <h1><span>Passbolt</span></h1>
+            </div>
+        </div>
+        <div class="col2 search-wrapper">
+            <h2 class="visuallyhidden">Help Search</h2>
+            <div>
+                <form class="search ready" action="/search.html" method="get">
+                    <div class="input required">
+                        <label for="search-box">Search</label>
+                        <input id="search-box" name="query" maxlength="64" placeholder="Help search" class="fuzzy-search" type="search">
+                    </div>
+                    <button value="search">
+                        <i class="fa fa-fw fa-search"></i>
+                        <span class="text visuallyhidden">search</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="edit-on-github">
+                <a href="https://github.com/passbolt/passbolt_help/edit/master/_posts/2018-03-14-hosting-install-docker-v2.md" class="button">
+                    <i class="fa fa-github-alt fa-fw"></i> Edit on github</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel main" aria-label="Content">
+        <div class="panel left">
+            
+            
+
+
+
+
+
+<div class="navigation wizard" role="navigation">
+    <ul>
+        <li><h2>Hosting</h2></li>
+        
+        <li >
+            <a href="https://help.passbolt.com/faq/hosting">Hosting FAQ</a>
+        </li>
+        
+        
+        <li class="selected">
+            <a href="https://help.passbolt.com/hosting/install">Installation</a>
+        </li>
+        
+            
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/update">Update</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/upgrade">Upgrade</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/backup">Backup</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://community.passbolt.com/c/installation-issues">Installation issues</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+            
+        </div>
+        <div class="panel middle" data-spy="scroll" data-target=".scrollspy">
+            <div class="grid grid-responsive-12">
+                <article>
+                    <div class="row" id="introduction">
+    <div class="col12">
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <div class="main-cell">
+                        <a href="https://www.passbolt.com"><span>home</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="main-cell">
+                        <a href="/"><span>help</span></a>
+                    </div>
+                </li>
+                
+                
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting"><span>hosting</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting/install"><span>install</span></a>
+                    </div>
+                </li>
+                
+                
+                
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting/install/ce/docker.html"><span>docker</span></a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="row" markdown="1">
+<div class="col7" markdown="1">
+<h1>Docker passbolt installation</h1>
+</div>
+</div>
+
+                    <div class="row">
+  <div class="col7">
+
+    <h2 id="system-requirements">System requirements</h2>
+
+    <ul>
+      <li>Docker CE</li>
+    </ul>
+
+    <h2 id="optional-system-requirements">Optional system requirements</h2>
+
+    <ul>
+      <li>MySQL &lt; 8.x or MariaDB if you plan not to host mysql on a docker container.</li>
+      <li>docker-compose if you plan to use a docker-compose.yml file to run passbolt container.</li>
+      <li>rng-tools/haveged for faster filling of container entropy pool. These tools come handy in cases where GnuPG complains about no entropy is available to perform some operation (generate keys, encrypt, sign…) inside the docker container. <a href="https://security.stackexchange.com/questions/39992/is-it-safe-to-use-rng-tools-on-a-virtual-machine">Important considerations</a></li>
+    </ul>
+
+    <h2 id="getting-passbolt-container">Getting passbolt container</h2>
+
+    <p>Passbolt containers follow the following tagging:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;version_number&gt;-&lt;build_number&gt;-debian
+</code></pre></div>    </div>
+
+    <p>Nobody is perfect so we also provide a  <em>latest</em> tag for Passbolt containers. Through all this documentation pages we make use of the latest tag so users will get the last version of passbolt.
+However, it is recommended that users pull the tags pointing to specific passbolt versions when running in environments other than testing.</p>
+
+    <p>Get passbolt  latest docker container:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker pull passbolt/passbolt:latest
+</code></pre></div>    </div>
+
+    <h2 id="using-passbolt-container">Using passbolt container</h2>
+
+    <p>Passbolt requires a database backend to store the information. In this section we will be using a MariaDB database packaged as a docker container.</p>
+
+    <h3 id="manually-run-passbolt-container-and-mariadb-container">Manually run passbolt container and mariadb container</h3>
+
+    <p>It is recommended to create a user defined network to ease the container name resolution. Using a user defined network will provide a method to access containers using their names instead ip addresses:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker network create passbolt_network
+</code></pre></div>    </div>
+
+    <p>First run the mariadb container:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">-d</span> <span class="nt">--name</span> mariadb <span class="nt">--net</span> passbolt_network <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>&lt;root_password&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">MYSQL_DATABASE</span><span class="o">=</span>&lt;mariadb_database&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">MYSQL_USER</span><span class="o">=</span>&lt;mariadb_user&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>&lt;mariadb_password&gt; <span class="se">\</span>
+             mariadb
+</code></pre></div>    </div>
+
+    <p>Now we can run the passbolt container:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">--name</span> passbolt <span class="nt">--net</span> passbolt_network <span class="se">\</span>
+             <span class="nt">-p</span> 443:443 <span class="se">\</span>
+             <span class="nt">-p</span> 80:80 <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_HOST</span><span class="o">=</span>mariadb <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_PASSWORD</span><span class="o">=</span>&lt;mariadb_password&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_USERNAME</span><span class="o">=</span>&lt;mariadb_user&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_DATABASE</span><span class="o">=</span>&lt;mariadb_database&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">APP_FULL_BASE_URL</span><span class="o">=</span>https://mydomain.com <span class="se">\</span>
+             passbolt/passbolt:latest
+</code></pre></div>    </div>
+
+    <p>Note: strings between ‘&lt;’ and ‘&gt;’ are variables that the users should fill with their data.</p>
+
+    <h3 id="manually-creating-first-admin-user">Manually creating first admin user</h3>
+
+    <p>Once the passbolt container is up and running use this command to generate the first admin user:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker <span class="nb">exec </span>passbolt su <span class="nt">-m</span> <span class="nt">-c</span> <span class="s2">"/var/www/passbolt/bin/cake </span><span class="se">\</span><span class="s2">
+                                passbolt register_user </span><span class="se">\</span><span class="s2">
+                                -u &lt;your@email.com&gt; </span><span class="se">\</span><span class="s2">
+                                -f &lt;yourname&gt; </span><span class="se">\</span><span class="s2">
+                                -l &lt;surname&gt; </span><span class="se">\</span><span class="s2">
+                                -r admin"</span> <span class="nt">-s</span> /bin/sh www-data
+</code></pre></div>    </div>
+
+    <p>It will output a link similar to the below one that can be pasted on the browser to finalize user registration:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://mydomain.com/setup/install/1eafab88-a17d-4ad8-97af-77a97f5ff552/f097be64-3703-41e2-8ea2-d59cbe1c15bc
+</code></pre></div>    </div>
+
+    <h3 id="using-docker-compose">Using docker-compose</h3>
+
+    <p>From the docker-compose official docs: ‘Compose is a tool for defining and running multi-container Docker applications’</p>
+
+    <p>Passbolt provides a <a href="https://github.com/passbolt/passbolt_docker/blob/master/docker-compose.yml">docker-compose.yml</a> file. That users can download and use with docker-compose.
+The easiest way to use passbolt provided docker-compose.yml is to:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/passbolt/passbolt_docker
+<span class="nv">$ </span><span class="nb">cd </span>passbolt_docker
+</code></pre></div>    </div>
+
+    <p>At this point some users might want to customize passbolt environment variables and change the fullBaseUrl for instance. Environment variables are defined in the following files:</p>
+    <ul>
+      <li>env/mysql.env</li>
+      <li>env/passbolt.env</li>
+    </ul>
+
+    <p>Once the files fit your needs it is time to:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-compose <span class="nt">-f</span> docker-compose.yml up
+</code></pre></div>    </div>
+
+    <h3 id="create-first-admin-user-using-docker-compose">Create first admin user using docker-compose</h3>
+
+    <p>If you run passbolt using <a href="https://github.com/passbolt/passbolt_docker/blob/master/docker-compose.yml">docker-compose.yml</a> provided by passbolt:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-compose <span class="nb">exec </span>passbolt su <span class="nt">-m</span> <span class="nt">-c</span> <span class="s2">"/var/www/passbolt/bin/cake </span><span class="se">\</span><span class="s2">
+                                passbolt register_user </span><span class="se">\</span><span class="s2">
+                                -u &lt;your@email.com&gt; </span><span class="se">\</span><span class="s2">
+                                -f &lt;yourname&gt; </span><span class="se">\</span><span class="s2">
+                                -l &lt;surname&gt; </span><span class="se">\</span><span class="s2">
+                                -r admin"</span> <span class="nt">-s</span> /bin/sh www-data
+</code></pre></div>    </div>
+
+    <h2 id="persisting-data-in-passbolt-container">Persisting data in passbolt container</h2>
+
+    <p>There are several locations that might be interesting for the users to persist data between container restarts:</p>
+    <ul>
+      <li>Images directory: /var/www/passbolt/webroot/img</li>
+      <li>Gnupg serverkeys directory: /var/www/passbolt/config/gpg</li>
+      <li>SSL certificate files: /etc/ssl/certs/certiticate.crt /etc/ssl/certs/certificate.key</li>
+    </ul>
+
+    <p>This files and directories can be persisted in the docker volume using <a href="https://docs.docker.com/storage/volumes/">docker volumes</a> or using <a href="https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount">bind mounts</a></p>
+
+    <h3 id="examples">Examples</h3>
+
+    <p>An example for persisting the images directory could be to create a docker volume:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker volume create passbolt_images
+</code></pre></div>    </div>
+
+    <p>And run passbolt container with the previously created volume:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">--name</span> passbolt <span class="nt">--net</span> passbolt_network <span class="se">\</span>
+             <span class="nt">--mount</span> <span class="nb">source</span><span class="o">=</span>passbolt_images,<span class="se">\</span>
+             <span class="nv">target</span><span class="o">=</span>/var/www/passbolt/webroot/img <span class="se">\</span>
+             <span class="nt">-p</span> 443:443 <span class="se">\</span>
+             <span class="nt">-p</span> 80:80 <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_HOST</span><span class="o">=</span>mariadb <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_PASSWORD</span><span class="o">=</span>&lt;mariadb_password&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_USERNAME</span><span class="o">=</span>&lt;mariadb_user&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_DATABASE</span><span class="o">=</span>&lt;mariadb_database&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">APP_FULL_BASE_URL</span><span class="o">=</span>https://mydomain.com <span class="se">\</span>
+             passbolt/passbolt:latest
+</code></pre></div>    </div>
+
+    <p>Bind volumes are usually useful when, for instance, the SSL certificates or GnuPG keys have been already created in the host machine:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">--name</span> passbolt <span class="nt">--net</span> passbolt_network <span class="se">\</span>
+             <span class="nt">--mount</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bind</span>,<span class="se">\</span>
+               <span class="nb">source</span><span class="o">=</span>&lt;host_path_to_gnupg_keys_dir&gt;,<span class="se">\</span>
+               <span class="nv">target</span><span class="o">=</span>/var/www/passbolt/config/gpg <span class="se">\</span>
+             <span class="nt">-p</span> 443:443 <span class="se">\</span>
+             <span class="nt">-p</span> 80:80 <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_HOST</span><span class="o">=</span>mariadb <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_PASSWORD</span><span class="o">=</span>&lt;mariadb_password&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_USERNAME</span><span class="o">=</span>&lt;mariadb_user&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">DATASOURCES_DEFAULT_DATABASE</span><span class="o">=</span>&lt;mariadb_database&gt; <span class="se">\</span>
+             <span class="nt">-e</span> <span class="nv">APP_FULL_BASE_URL</span><span class="o">=</span>https://mydomain.com <span class="se">\</span>
+             passbolt/passbolt:latest
+</code></pre></div>    </div>
+
+    <p>An example of the above using docker-compose can be found <a href="https://github.com/passbolt/passbolt_docker/blob/master/docker-compose.yml">here</a> where bind mounts and volumes are used.</p>
+
+    <p>NOTE: If you dont provide any GnuPG severkey or SSL certificate passbolt container will create a self signed SSL certificate and a GnuPG server key pair.</p>
+
+    <div class="last-updated">
+      <h3>Last updated</h3>
+      <p>This article was last updated on 
+April
+2nd,
+2018.</p>
+    </div>
+
+  </div>
+  <div class="col4 last push1">
+
+    <div class="tldr">
+    <h4 class="visuallyhidden">Available on docker hub</h4>
+    <p>
+        <a href="https://hub.docker.com/r/passbolt/passbolt/" target="_blank" rel="noopener nofollow">
+            <img alt="Docker Logo" src="/assets/img/third_party/docker_small_h.png" style="" />
+        </a>
+    </p>
+    <a href="https://hub.docker.com/r/passbolt/passbolt/" class="primary button">
+        Get passbolt container!
+    </a>
+</div>
+
+    <div class="message tldr notice">
+    <p>Are you experiencing issues when installing passbolt?</p>
+    
+    <a href="https://community.passbolt.com/c/installation-issues" class="button primary">Ask the community!</a>
+    
+</div>
+
+  </div>
+</div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <ul class="footer-links">
+                <li><a href="https://www.passbolt.com/licence">Terms</a></li>
+                <li><a href="https://www.passbolt.com/privacy">Privacy</a></li>
+                <li><a href="https://www.passbolt.com/credits">Credits</a></li>
+                <li><a href="https://careers.passbolt.com">Careers</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//passbolt.piwikpro.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//passbolt.piwikpro.com//piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+<script src="https://help.passbolt.com/assets/js/greedynav.js"></script>
+</body>
+</html>

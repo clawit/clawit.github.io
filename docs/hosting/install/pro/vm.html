@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Passbolt Help | Using Passbolt pro virtual machine appliance</title>
+    <!--
+             ____                  __          ____
+            / __ \____  _____ ____/ /_  ____  / / /_
+           / /_/ / __ `/ ___/ ___/ __ \/ __ \/ / __/
+          / ____/ /_/ (__  |__  ) /_/ / /_/ / / /_
+         /_/    \__,_/____/____/_.___/\____/_/\__/
+
+         Open source password manager for teams
+         © 2018 Passbolt SARL
+
+     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta property="og:image" content="https://help.passbolt.com/assets/img/background/og_preview.jpg" />
+    <meta property="og:title" content="Using Passbolt pro virtual machine appliance" />
+    <meta property="og:description" content="" />
+
+    <link rel="stylesheet" href="https://help.passbolt.com/assets/css/help.min.css">
+    <link rel="stylesheet" href="https://help.passbolt.com/assets/css/highlight.css">
+    <link rel="canonical" href="https://help.passbolt.com/hosting/install/pro/vm">
+    <link rel="shortcut icon" type="image/x-icon" href="https://help.passbolt.com/assets/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Passbolt | Help" href="https://help.passbolt.com/feed.xml">
+
+</head>
+
+<body>
+<div id="container" class="help page background">
+    <header>
+        <div class="header first ">
+            <nav class="greedy">
+                <div class="top navigation primary">
+                    <ul class="links clearfix">
+                        <li class="home with-text"><a href="http://www.passbolt.com/"><span>home</span></a></li>
+                        <li class="left"><a href="https://www.passbolt.com/services"><span>pricing</span></a></li>
+                        <li class="left"><a href="https://demo.passbolt.com" target="_blank" rel="noopener"><span>demo</span></a></li>
+                        <li class="left"><a href="https://www.passbolt.com/blog"><span>blog</span></a></li>
+                        <li class="left selected"><a href="//help.passbolt.com/"><span>help</span></a></li>
+                    </ul>
+                    <button class="hidden" count="0">more</button>
+                    <ul class="hidden-links hidden"></ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="header second">
+        <div class="col1">
+            <div class="logo no-img">
+                <h1><span>Passbolt</span></h1>
+            </div>
+        </div>
+        <div class="col2 search-wrapper">
+            <h2 class="visuallyhidden">Help Search</h2>
+            <div>
+                <form class="search ready" action="/search.html" method="get">
+                    <div class="input required">
+                        <label for="search-box">Search</label>
+                        <input id="search-box" name="query" maxlength="64" placeholder="Help search" class="fuzzy-search" type="search">
+                    </div>
+                    <button value="search">
+                        <i class="fa fa-fw fa-search"></i>
+                        <span class="text visuallyhidden">search</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col3">
+            <div class="edit-on-github">
+                <a href="https://github.com/passbolt/passbolt_help/edit/master/_posts/2018-04-10-hosting-install-vm-pro.md" class="button">
+                    <i class="fa fa-github-alt fa-fw"></i> Edit on github</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel main" aria-label="Content">
+        <div class="panel left">
+            
+            
+
+
+
+
+
+<div class="navigation wizard" role="navigation">
+    <ul>
+        <li><h2>Hosting</h2></li>
+        
+        <li >
+            <a href="https://help.passbolt.com/faq/hosting">Hosting FAQ</a>
+        </li>
+        
+        
+        <li class="selected">
+            <a href="https://help.passbolt.com/hosting/install">Installation</a>
+        </li>
+        
+            
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/update">Update</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/upgrade">Upgrade</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://help.passbolt.com/hosting/backup">Backup</a>
+        </li>
+        
+        
+        <li >
+            <a href="https://community.passbolt.com/c/installation-issues">Installation issues</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+            
+        </div>
+        <div class="panel middle" data-spy="scroll" data-target=".scrollspy">
+            <div class="grid grid-responsive-12">
+                <article>
+                    <div class="row" id="introduction">
+    <div class="col12">
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <div class="main-cell">
+                        <a href="https://www.passbolt.com"><span>home</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="main-cell">
+                        <a href="/"><span>help</span></a>
+                    </div>
+                </li>
+                
+                
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting"><span>hosting</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting/install"><span>install</span></a>
+                    </div>
+                </li>
+                
+                
+                
+                <li>
+                    <div class="main-cell">
+                        <a href="https://help.passbolt.com/hosting/install/pro/vm.html"><span>vm</span></a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="row" markdown="1">
+<div class="col7" markdown="1">
+<h1>Using Passbolt pro virtual machine appliance</h1>
+</div>
+</div>
+
+                    
+<div class="row">
+  <div class="col7">
+
+    <p>Passbolt Pro provides a virtual appliance in OVA format. Users can import this appliance on their private virtualization platform and start enjoying Passbolt Pro.
+The VM includes the following software:</p>
+    <ul>
+      <li>Debian 9.6</li>
+      <li>Nginx</li>
+      <li>Php-fpm</li>
+      <li>Mariadb</li>
+      <li>Passbolt Pro preinstalled</li>
+      <li>certbot</li>
+      <li>haveged to fill the entropy pool faster</li>
+      <li>Scripts to easy managing SSL setup of the VM</li>
+    </ul>
+
+    <h2 id="getting-started-with-passbolt-pro-vm">1. Getting started with Passbolt Pro VM</h2>
+
+    <h3 id="download">1.1 Download</h3>
+
+    <p>Download the ova and the SHA512SUM.txt:</p>
+
+    <ul>
+      <li><a href="https://www.passbolt.com/pro/download/vm/debian/latest">Passbolt Pro VM</a></li>
+      <li><a href="https://www.passbolt.com/pro/download/vm/debian/latest-checksum">SHA512SUM.txt</a></li>
+    </ul>
+
+    <p>Import the ova file using virtualbox, vmware or any other platform that supports OVA files.</p>
+
+    <p>Once imported into users should be able to boot the VM and just point to the VM ip address with their web browser to initiate the passbolt install process.
+However it is encouraged that users log in the VM and start the SSL setup proces.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VM login credentials:
+username: passbolt
+password: admin
+</code></pre></div>    </div>
+
+    <p>The appliance comes with a example empty database to quickly test Passbolt Pro. However it is encouraged to change password for this database:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Database default credentials:
+database name: passbolt
+username: passbolt
+password: passbolt
+</code></pre></div>    </div>
+
+    <h3 id="ssl-setup-process">1.2. SSL setup process:</h3>
+
+    <p><strong>Important note:</strong> It is recommended to run the SSL setup before running the installation wizard to avoid secrets to be transmitted unencrypted during the installation process.</p>
+
+    <p>Passbolt Pro provides a set of ssl scripts to easily setup SSL. This scripts are located in:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/passbolt/passbolt_ssl_setup/passbolt_pro_debian_ssl_installer.sh
+</code></pre></div>    </div>
+
+    <p>Executing the following command the script will guide you through the SSL setup:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo</span> /home/passbolt/passbolt_ssl_setup/passbolt_pro_debian_ssl_installer.sh
+</code></pre></div>    </div>
+
+    <h2 id="configure-passbolt">2. Configure passbolt</h2>
+
+    <p>Before you can use the application, you need to configure it. Point your browser to the hostname / ip where passbolt can
+be reached. You will reach a getting started page.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-getting-started.png" alt="passbolt welcome page before configuration" style="max-width:586px;" />
+    <span class="legend">fig. passbolt welcome page before configuration</span>
+</figure>
+
+    <p>Two options are available: <strong>Manual configuration</strong> and <strong>Wizard configuration</strong>. Choose Wizard configuration.</p>
+
+    <p>This tutorial will guide you through the different steps of the wizard. The manual configuration is not
+covered in this article.</p>
+
+    <h3 id="healthcheck">2.1. Healthcheck</h3>
+
+    <p>The first page of the wizard will tell you if your environment is ready for passbolt. Solve any issues and click on
+“Start configuration” when ready.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-healthcheck.png" alt="wizard - healthcheck" style="max-width:586px;" />
+    <span class="legend">fig. wizard - healthcheck</span>
+</figure>
+
+    <h3 id="subscription-key">2.2. Subscription key</h3>
+
+    <p>At this step, the wizard will ask you for your subscription key. You should have received it by email soon after your online purchase.
+Enter it in the box.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-subscription-key.png" alt="wizard - subscription key" style="max-width:586px;" />
+    <span class="legend">fig. wizard - subscription key</span>
+</figure>
+
+    <h3 id="database">2.3. Database</h3>
+
+    <p>This step is about telling passbolt which database to use. Enter the host name, port number, database name, username and password.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-database.png" alt="wizard - database" style="max-width:586px;" />
+    <span class="legend">fig. wizard - database</span>
+</figure>
+
+    <h3 id="gpg-key">2.4. GPG key</h3>
+
+    <p>In this section you can either generate or import a GPG key pair. This key pair will be used by passbolt API to authentify itself during the
+authentication handshake process.</p>
+
+    <p>Generate a key if you don’t have one.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-server-key-generate.png" alt="wizard - generate a key pair" style="max-width:586px;" />
+    <span class="legend">fig. wizard - generate a key pair</span>
+</figure>
+
+    <p>Import a key if you already have one and you want your server to use it.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-server-key-import.png" alt="wizard - import a key pair" style="max-width:586px;" />
+    <span class="legend">fig. wizard - import a key pair</span>
+</figure>
+
+    <h3 id="mail-server-smtp">2.5. Mail server (SMTP)</h3>
+
+    <p>At this stage, the wizard will ask you to enter the details of your SMTP server.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-email.png" alt="wizard - smtp mail server details" style="max-width:586px;" />
+    <span class="legend">fig. wizard - smtp mail server details</span>
+</figure>
+
+    <p>You can also test that your configuration is correct by using the test email feature at the right of your screen. Enter
+the email address at which you want the wizard to send you a test email and click on “Send test email”.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/04/wizard-test-email.png" alt="wizard - test smtp settings" style="max-width:300px;" />
+    <span class="legend">fig. wizard - test smtp settings</span>
+</figure>
+
+    <h3 id="preferences">2.6. Preferences</h3>
+
+    <p>The wizard will then ask you what preferences you prefer for your instance of passbolt. The recommended defaults are already pre-populated
+but you can also change them if you know what you are doing.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-options.png" alt="wizard - preferences" style="max-width:586px;" />
+    <span class="legend">fig. wizard - preferences</span>
+</figure>
+
+    <h3 id="first-user-creation">2.7. First user creation</h3>
+
+    <p>You need to create the first admin user account. This first admin user is probably you, so enter your details and click on next.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-first-user.png" alt="wizard - first user" style="max-width:586px;" />
+    <span class="legend">fig. wizard - first user</span>
+</figure>
+
+    <h3 id="installation">2.8. Installation</h3>
+
+    <p>That’s it. The wizard has now enough information to proceed with the configuration of passbolt. Sit back and relax for a few seconds while
+the configuration process is going on.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-install.png" alt="wizard - installation" style="max-width:586px;" />
+    <span class="legend">fig. wizard - installation</span>
+</figure>
+
+    <p>Your user account is now created. You will see a redirection page for a few second and then will be redirected
+to the user setup process so that you can configure your user account.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/web-installer-pro-completed.png" alt="wizard - completion and redirection" style="max-width:586px;" />
+    <span class="legend">fig. wizard - completion and redirection</span>
+</figure>
+
+    <h2 id="configure-your-administrator-account">3. Configure your administrator account</h2>
+
+    <h3 id="download-the-plugin">3.1. Download the plugin</h3>
+
+    <p>Before continuing passbolt will require you to download its plugin. If you already have it installed you can go to the
+next step.</p>
+
+    <h3 id="check-the-server-identity">3.2. Check the server identity</h3>
+
+    <p>Passbolt will ask you to check the URL passbolt is associated with.</p>
+
+    <p>If you recognize the domain name, check the checkbox and then click “Next”. It is a formality here, but it is a security
+mesure that will help later your users to identify you passbolt instance.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/01/url-check.png" alt="Validation of the domain" style="max-width:450px;" />
+    <span class="legend">fig. Validation of the domain</span>
+</figure>
+
+    <h3 id="create-a-new-key">3.3. Create a new key</h3>
+
+    <p>Passbolt will ask you to create or import a key that will be later use to identify you and encrypt your passwords.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/plugin-registration-key-generate.png" alt="Generate a key" style="max-width:450px;" />
+    <span class="legend">fig. Generate a key</span>
+</figure>
+
+    <h3 id="choose-a-password">3.4. Choose a password</h3>
+
+    <p>Your key needs to be protected by a password. Choose it wisely, it will be the gatekeeper to all your other passwords.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/01/set-passphrase.png" alt="setting a passphrase" style="max-width:450px;" />
+    <span class="legend">fig. setting a passphrase</span>
+</figure>
+
+    <h3 id="backup-your-key">3.5. Backup your key</h3>
+
+    <p>This step is essential. Your key is the only way to access your account and passwords. If you lose this key (by breaking
+or losing your computer and not having a backup for example), your encrypted data will be lost even if you remember your
+passphrase.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/plugin-registration-backup.png" alt="backup your key" style="max-width:450px;" />
+    <span class="legend">fig. backup your key</span>
+</figure>
+
+    <h3 id="define-your-security-token">3.6. Define your security token</h3>
+
+    <p>Choosing a color and a three character token is a secondary security mechanism that helps you to mitigate phishing
+attacks. Each time you are performing a sensitive operation on passbolt, you should see this token.</p>
+
+    <figure>
+    <img src="https://help.passbolt.com/assets/img/help/2018/11/plugin-registration-security-token.png" alt="define your security token" style="max-width:450px;" />
+    <span class="legend">fig. define your security token</span>
+</figure>
+
+    <h3 id="thats-it">3.6. That’s it!</h3>
+
+    <p>Your administrator account is configured. You will be redirected to the login page of passbolt. Enjoy!</p>
+
+    <div class="last-updated">
+      <h3>Last updated</h3>
+      <p>This article was last updated on 
+November
+13th,
+2018.</p>
+    </div>
+
+  </div>
+  <div class="col4 last push1">
+
+    <div class="message tldr notice">
+    <p>Are you experiencing issues with Passbolt Pro Edition?</p>
+    <a href="mailto:contact@passbolt.com" class="button primary">Contact Pro support</a>
+    <p>or <a href="https://community.passbolt.com">ask the community</a></p>
+
+</div>
+
+  </div>
+</div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <ul class="footer-links">
+                <li><a href="https://www.passbolt.com/licence">Terms</a></li>
+                <li><a href="https://www.passbolt.com/privacy">Privacy</a></li>
+                <li><a href="https://www.passbolt.com/credits">Credits</a></li>
+                <li><a href="https://careers.passbolt.com">Careers</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//passbolt.piwikpro.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//passbolt.piwikpro.com//piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+<script src="https://help.passbolt.com/assets/js/greedynav.js"></script>
+</body>
+</html>
