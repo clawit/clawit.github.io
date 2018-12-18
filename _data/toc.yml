@@ -26,15 +26,15 @@
       url: https://community.passbolt.com/c/site-feedback
       icon: fa-comment
       teaser: We are not machines and it's a cold world out there.
-- title: Get started
-  slug: start
+- title: Game
+  slug: game
   teaser: All the basics to set up and use passbolt
   items:
-    - title: Get started using passbolt
+    - title: MagCore
       url: /faq/discover
       icon: fa-compass
       teaser: Frequently asked questions during first time use.
-    - title: Browser extension
+    - title: Red Alert - Revival
       url: /faq/start/browser-extensions
       icon: fa-firefox
       teaser: How to install and remove the browser extensions.

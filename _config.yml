@@ -23,8 +23,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://clawit.github.io"
 
-piwik: true
-
 # Build settings
 markdown: kramdown
 plugins:
