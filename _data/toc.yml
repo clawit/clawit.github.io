@@ -1,12 +1,12 @@
-- title: Discover
-  slug: discover
+- title: Lib
+  slug: lib
   teaser: Everybody has to start somewhere
   items:
-    - title: Discovery FAQ
+    - title: SystemCommonLibrary
       url: /faq/discover
       icon: fa-compass
       teaser: Everybody has to start somewhere.
-    - title: Roadmap
+    - title: Cache
       url: https://www.passbolt.com/roadmap
       icon: fa-map
       teaser: What are the current and upcoming features.
@@ -50,15 +50,15 @@
       url: https://community.passbolt.com
       icon: fa-comments
       teaser: When in doubt, you can also ask the community!
-- title: Hosting
-  slug: hosting
+- title: System
+  slug: system
   teaser: Hosting a passbolt server
   items:
-    - title: Hosting FAQ
+    - title: CocoHub
       url: /faq/hosting
       icon: fa-server
       teaser: Frequently asked questions about hosting
-    - title: Installation
+    - title: Fan
       slug: install
       url: /hosting/install
       icon: fa-cogs
@@ -82,11 +82,11 @@
       url: https://community.passbolt.com/c/installation-issues
       icon: fa-life-saver
       teaser: Do you need help installing passbolt?
-- title: Configure
-  slug: configure
+- title: Software
+  slug: software
   teaser: Configure your passbolt instance
   items:
-    - title: Configure LDAP
+    - title: Rinner
       url: /configure/ldap
       icon: fa-address-book-o
       teaser: How to configure the directory sync plugin
