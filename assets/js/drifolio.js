@@ -13,13 +13,13 @@ $(window).load(function () { // makes sure the whole site is loaded
 //========================
 //CUSTOM SCROLLBAR
 //========================
-$("html").niceScroll({
-    mousescrollstep: 70,
-    cursorcolor: "#ea9312",
-    cursorwidth: "5px",
-    cursorborderradius: "10px",
-    cursorborder: "none",
-});
+// $("html").niceScroll({
+//     mousescrollstep: 70,
+//     cursorcolor: "#ea9312",
+//     cursorwidth: "5px",
+//     cursorborderradius: "10px",
+//     cursorborder: "none",
+// });
 
 
 //========================
